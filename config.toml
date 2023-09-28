@@ -68,7 +68,7 @@ ignoreErrors = ["error-remote-getjson"]
   # Note: ["ACTIVITY", "URL or PATH TO YOUR MARKDOWN FILE"]
   files = [ 
     ["(✧ᴗ✧✿) GitHub", "https://github.com/haysberg"],
-    ["(￢з￢) LinkedIn", "https://www.linkedin.com/in/teo-hays"],
+    ["⸜(｡˃ ᵕ ˂)⸝♡ LinkedIn", "https://www.linkedin.com/in/teo-hays"],
     ["☀(▀U ▀-͠) Cool resume", "cool_resume.pdf"],
     ["Email ✧( ु•⌄• )◞💌◟( •⌄• )✧", "mailto:teo@haysberg.io"]
   ]
