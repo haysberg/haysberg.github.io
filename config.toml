@@ -1,42 +1,33 @@
+theme = "archie"
 baseURL = 'https://haysberg.io/'
 languageCode = 'en-us'
 title = 'teo@interwebs:~/$'
 author = "Téo Haÿs"
 staticDir = ['static']
-
-[module]
-  [module.hugoVersion]
-    extended=true
-    min = "0.41.0"
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.parser]
-      [markup.goldmark.parser.attribute]
-        block = true
-        title = true
-  [markup.highlight]
-    anchorLineNos = false
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ''
-    hl_inline = false
-    lineAnchors = ''
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    noClasses = true
-    noHl = false
-    style = 'rrt'
-    tabWidth = 4
-  [markup.tableOfContents]
-    startLevel = 2
-    endLevel = 3
-    ordered = false
+copyright = "© Téo Haÿs"
 
 [params]
-  [params.theme_config]
-    appearance = "light"
-    back_home_text = ".."
-    date_format = "2006-01-02"
-    show_description = true
+	mode="toggle" # color-mode → light,dark,toggle or auto
+	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
+	subtitle = """
+        ┬┴┬┴┤•ᴥ•ʔ├┬┴┬┴
+    Hello, I'm Téo, your local SRE baguette boi.
+    I mostly use 𝖐𝖚𝖇𝖊𝖗𝖓𝖊𝖙𝖊𝖘 and other tools such as 𝖆𝖓𝖘𝖎𝖇𝖑𝖊 and 𝖍𝖊𝖑𝖒 because I'm a (つ▀¯▀ )つ 🔥 cool kid 🔥
+    """
+	mathjax = false
+	katex = false
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/haysberg"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/teo-hays"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "mail"
+url = "mailto:teo@haysberg.io"
