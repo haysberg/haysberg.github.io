@@ -1,33 +1,30 @@
-theme = "archie"
-baseURL = 'https://haysberg.io/'
-languageCode = 'en-us'
-title = 'teo@interwebs:~/$'
+base_url = "https://haysberg.io/"
+title = "💻✨ teo@interwebs"
+description = "Check out my links !"
+
+compile_sass = true
+generate_feeds = true
+
+taxonomies = [
+    { name = "tags" },
+    { name = "categories" },
+    { name = "contexts" },
+]
+
+[markdown]
+highlight_code = true
+
+[extra]
 author = "Téo Haÿs"
-staticDir = ['static']
-copyright = "© Téo Haÿs"
-
-[params]
-	mode="toggle" # color-mode → light,dark,toggle or auto
-	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
-	subtitle = """
-        ┬┴┬┴┤•ᴥ•ʔ├┬┴┬┴
-    Hello, I'm Téo, your local SRE baguette boi.
-    I mostly use 𝖐𝖚𝖇𝖊𝖗𝖓𝖊𝖙𝖊𝖘 and other tools such as 𝖆𝖓𝖘𝖎𝖇𝖑𝖊 and 𝖍𝖊𝖑𝖒 because I'm a (つ▀¯▀ )つ 🔥 cool kid 🔥
-    """
-	mathjax = false
-	katex = false
-
-[[params.social]]
-name = "GitHub"
-icon = "github"
-url = "https://github.com/haysberg"
-
-[[params.social]]
-name = "LinkedIn"
-icon = "linkedin"
-url = "https://www.linkedin.com/in/teo-hays"
-
-[[params.social]]
-name = "LinkedIn"
-icon = "mail"
-url = "mailto:teo@haysberg.io"
+# logo = "images/logo.png"
+# header_nav = [
+#     { name = "~home", url = "/no-style-please/" },
+#     { name = "#tags", url = "/no-style-please/tags" },
+#     { name = "+categories", url = "/no-style-please/categories" },
+#     { name = "@contexts", url = "/no-style-please/contexts" },
+# ]
+# footer_nav = [
+#     { name = "< previous", url = "#" },
+#     { name = "webring", url = "#" },
+#     { name = "next >", url = "#" },
+# ]
