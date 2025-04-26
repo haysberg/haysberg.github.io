@@ -11,7 +11,9 @@ I mostly use 𝖐𝖚𝖇𝖊𝖗𝖓𝖊𝖙𝖊𝖘 and other tools such as �
 
 I have 5 years of experience in CompSci and have touched a lot of different tech, I'm a jack of all trades !
 
-You should definitely pay [my LinkedIn](https://www.linkedin.com/in/teo-hays) a visit and offer me a job ᵒʳ ᵉˡˢᵉ. 
+You should definitely pay [my LinkedIn](https://www.linkedin.com/in/teo-hays) a visit and offer me a job ᵒʳ ᵉˡˢᵉ.
+
+Send me a 💌 love letter 💖 (job offer) at my email : [teo at haysberg dot io](mailto:teo@haysberg.io)
 
 Check my links out !
 - [GitHub (✧ᴗ✧🌸)](https://github.com/haysberg)
