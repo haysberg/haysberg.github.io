@@ -1,19 +1,17 @@
 ---
 ---
 
-<img src="images/me.png" alt="drawing" style="width:200px;"/>
+<img src="images/me.avif" alt="drawing" style="width:200px;"/>
 
 ┬┴┬┴┤•ᴥ•ʔ├┬┴┬┴
 
-Hello, I'm Téo, your local DevSecOps / SRE enjoyer.
+Hello, I'm Téo, an SRE mad scientist.
 
 I mostly use 𝖐𝖚𝖇𝖊𝖗𝖓𝖊𝖙𝖊𝖘 and other tools such as 𝖆𝖓𝖘𝖎𝖇𝖑𝖊 and 𝖙𝖊𝖗𝖗𝖆𝖋𝖔𝖗𝖒 because I'm a (つ▀¯▀ )つ 🔥 cool kid 🔥
 
-I have 5 years of experience in CompSci and have touched a lot of different tech, I'm a jack of all trades !
+Send me a 💌 love letter 💖 at my email : [teo at haysberg dot io](mailto:teo@haysberg.io)
 
-You should definitely pay [my LinkedIn](https://www.linkedin.com/in/teo-hays) a visit and offer me a job ᵒʳ ᵉˡˢᵉ.
-
-Send me a 💌 love letter 💖 (job offer) at my email : [teo at haysberg dot io](mailto:teo@haysberg.io)
+You should definitely pay my links a visit or I'll cry.
 
 Check my links out !
 - [GitHub (✧ᴗ✧🌸)](https://github.com/haysberg)
