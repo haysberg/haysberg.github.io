@@ -1,6 +1,6 @@
 base_url = "https://haysberg.io/"
 title = "✨teo@interwebs✨"
-description = "Check out my links !"
+description = "SRE mad scientist and funny guy."
 
 compile_sass = true
 generate_feeds = true
@@ -11,8 +11,8 @@ taxonomies = [
     { name = "contexts" },
 ]
 
-[markdown]
-highlight_code = true
+[markdown.highlighting]
+theme = "github-light"
 
 [extra]
 author = "Téo Haÿs"

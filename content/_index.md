@@ -11,7 +11,7 @@ I mostly use 𝖐𝖚𝖇𝖊𝖗𝖓𝖊𝖙𝖊𝖘 and other tools such as �
 
 Send me a 💌 love letter 💖 at my email : [teo at haysberg dot io](mailto:teo@haysberg.io)
 
-You should definitely pay my links a visit or I'll cry.
+You can find most of my public projects on my GitHub.
 
 Check my links out !
 - [GitHub (✧ᴗ✧🌸)](https://github.com/haysberg)
