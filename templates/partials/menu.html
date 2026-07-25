@@ -1,0 +1,24 @@
+{#- Overrides themes/terminus/templates/partials/menu.html.
+
+    Upstream only bypasses `get_url()` for URLs starting with "http", so any
+    other URL scheme gets rewritten into a relative path -- `mailto:me@x.io`
+    becomes `https://site/mailto:me@x.io`. The `is starting_with` test below is
+    widened to cover mailto: and tel:; everything else is verbatim upstream.
+
+    If the theme fixes this, delete this file and take the upstream version.
+-#}
+<nav class="main-menu" aria-label="Main Menu">
+    <a class="skip-to-content" href="#main">Skip to main content</a>
+    <button class="main-menu-dropdown-button" popovertarget="nav-menu">Menu</button>
+    <ul id="nav-menu" class="main-menu-items" aria-label="Site Navigation" popover>
+        {%- for item in config.extra.main_menu -%}
+        {%- if item.url is starting_with("http") or item.url is starting_with("mailto:") or item.url is starting_with("tel:") -%}
+            {%- set url = item.url -%}
+        {%- else -%}
+            {%- set trailing_slash = item.trailing_slash | default(value=false) -%}
+            {%- set url = get_url(path=item.url, trailing_slash=trailing_slash) -%}
+        {%- endif %}
+        <li><a href="{{ url | safe }}" {%- if item.new_tab %} target="_blank" {%- endif -%}>{{ item.name }}</a></li>
+        {%- endfor %}
+    </ul>
+</nav>

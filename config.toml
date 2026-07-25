@@ -1,18 +1,67 @@
 base_url = "https://haysberg.io/"
-title = "✨teo@interwebs✨"
+title = "teo@interwebs"
 description = "SRE mad scientist and funny guy."
+author = "Téo Haÿs"
+
+theme = "terminus"
 
 compile_sass = true
 generate_feeds = true
+build_search_index = true
 
 taxonomies = [
-    { name = "tags" },
-    { name = "categories" },
-    { name = "contexts" },
+    { name = "tags", feed = true },
+    { name = "categories", feed = true, paginate_by = 5 },
 ]
 
+[markdown]
+render_emoji = true
+external_links_class = "external"
+bottom_footnotes = true
+lazy_async_image = true
+github_alerts = true
+
 [markdown.highlighting]
-theme = "github-light"
+style = "inline"
+theme = "monokai"
 
 [extra]
 author = "Téo Haÿs"
+layout = "center"
+favicon_emoji = "🌶️"
+
+# Shown in the site header only. `config.title` stays compact because it also
+# becomes the <title> tag and the feed name. Rendered with `| safe`, so raw
+# HTML (an <img>, inline SVG) works here too -- unlike main_menu names.
+header_title = "💽✨ teo@interwebs"
+feed_icon = true
+copy_button = true
+show_default_author = false
+color_scheme = "terminus"
+stylesheets = ["css/custom.css"]
+
+# `::` splits the line into separately-wrapping spans; the visible separators
+# are added by the theme's CSS, not by this string.
+copyright = "(✿˵•́◡•̀˵)━✧.*"
+
+main_menu = [
+    { name = "📜blog", url = "blog", trailing_slash = true },
+    { name = "🌞resume", url = "cool_resume.pdf", new_tab = true },
+    { name = "🐙github", url = "https://github.com/haysberg", new_tab = true },
+    { name = "🌃linkedin", url = "https://www.linkedin.com/in/teo-hays", new_tab = true },
+    { name = "💌email", url = "mailto:teo@haysberg.io" },
+]
+
+socials = [
+    { name = "github", url = "https://github.com/haysberg" },
+    { name = "linkedin", url = "https://www.linkedin.com/in/teo-hays" },
+    { name = "email", url = "mailto:teo@haysberg.io" },
+]
+
+[extra.content_security_policy]
+enable = true
+allowed_domains = []
+
+[extra.responsive_images]
+widths = [640, 784, 1280, 1920, 2560]
+fallback_width = 1280

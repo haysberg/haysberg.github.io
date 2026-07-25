@@ -1,7 +1,13 @@
----
----
++++
+title = "Home"
 
-<img src="images/me.avif" alt="drawing" style="width:200px;"/>
+[extra]
+framed = true
+section_path = "blog/_index.md"
+max_posts = 5
++++
+
+<img src="images/me.avif" alt="A picture of Téo" style="width:200px;"/>
 
 ┬┴┬┴┤•ᴥ•ʔ├┬┴┬┴
 
@@ -12,9 +18,3 @@ I mostly use 𝖐𝖚𝖇𝖊𝖗𝖓𝖊𝖙𝖊𝖘 and other tools such as �
 Send me a 💌 love letter 💖 at my email : [teo at haysberg dot io](mailto:teo@haysberg.io)
 
 You can find most of my public projects on my GitHub.
-
-Check my links out !
-- [GitHub (✧ᴗ✧🌸)](https://github.com/haysberg)
-- [(ﾉ◕ヮ◕)ﾉ*:･ﾟ✨ LinkedIn](https://www.linkedin.com/in/teo-hays)
-- [Cool resume 🌞 (▀U ▀-͠)](cool_resume.pdf)
-- [Email ◟( ु•⌄• )◞💌◟( •⌄• )◞](mailto:teo@haysberg.io)

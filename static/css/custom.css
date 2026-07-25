@@ -1,0 +1,32 @@
+/* Site overrides, loaded after the theme's own stylesheet.
+ *
+ * The theme defines its palette as CSS custom properties in
+ * themes/terminus/sass/css/_themes.scss. Overriding them here means we never
+ * have to touch the submodule.
+ *
+ * Selector is copied verbatim from the theme so specificity matches exactly;
+ * this rule wins purely because it is loaded later. If you change
+ * `color_scheme` in config.toml, update the [data-theme] value below to match
+ * or this override will silently stop applying.
+ */
+:root:has(body[data-theme="terminus"]) {
+    /* was rgb(255, 168, 106) — orange */
+    --accent-color: #43bc74;
+}
+
+/* Main menu: drop the underline.
+ *
+ * The theme never sets `text-decoration` on `a` -- the underline comes from the
+ * browser's default stylesheet, so any author rule beats it.
+ *
+ * Restored on hover/focus so the links still signal they're interactive; the
+ * focus outline from the theme's `a:focus-visible` is untouched either way.
+ * Delete the second rule if you want them bare in every state. */
+.main-menu-items a {
+    text-decoration: none;
+}
+
+.main-menu-items a:hover,
+.main-menu-items a:focus-visible {
+    text-decoration: underline;
+}
