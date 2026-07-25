@@ -1,28 +1,21 @@
 +++
-title = "Hello world, again"
-description = "The blog is back. Placeholder post — edit or delete me."
+title = "Tools that make me feel comfy"
+description = "Tools that I cannot work without anymore."
 date = 2026-07-25
 draft = true
 
 [taxonomies]
-tags = ["meta"]
-categories = ["misc"]
+tags = ["tools", "linux"]
 +++
 
-The blog is running on [Terminus](https://github.com/ebkalderon/terminus) now.
+So I've had an obsession pretty much since I have started studying computer science, and it's been to find the best tools for what I do.
 
-<!-- more -->
+I have always wanted to have some sort of comprehensive list of tools I like to use and that make my computing experience smoother, and comfier.
 
-This is a placeholder so the post list, tags, and archive have something to
-render. Delete this file (or write over it) whenever you post for real.
-
-Things the theme gives you out of the box:
-
-- fenced code blocks with a copy button
-- GitHub-style alerts via the `alert` shortcode (`type` = note/tip/info/warning/danger)
-- tags and categories, each with their own feed
-- KaTeX math, if you set `katex = true`
-
-```bash
-zola serve   # preview at http://127.0.0.1:1111
-```
+## Kinoite and immutable Fedora variants
+## topgrade
+## KDE
+## pinact
+## flatpak
+## uv
+## Zed

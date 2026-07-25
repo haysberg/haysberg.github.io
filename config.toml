@@ -33,7 +33,7 @@ favicon_emoji = "🌶️"
 # Shown in the site header only. `config.title` stays compact because it also
 # becomes the <title> tag and the feed name. Rendered with `| safe`, so raw
 # HTML (an <img>, inline SVG) works here too -- unlike main_menu names.
-header_title = "💽✨ teo@interwebs"
+header_title = "💽 teo@interwebs"
 feed_icon = true
 copy_button = true
 show_default_author = false
@@ -42,7 +42,7 @@ stylesheets = ["css/custom.css"]
 
 # `::` splits the line into separately-wrapping spans; the visible separators
 # are added by the theme's CSS, not by this string.
-copyright = "(✿˵•́◡•̀˵)━✧.*"
+copyright = "(🌸˵•́◡•̀˵)━━━✧.*✨"
 
 main_menu = [
     { name = "📜blog", url = "blog", trailing_slash = true },
