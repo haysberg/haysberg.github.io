@@ -1,0 +1,28 @@
+{#- Projects page template.
+
+    A plain content page: renders the markdown body and nothing else. The
+    default `page.html` can't be used here because it stamps a publish date,
+    reading time and "Read More Posts" navigation, which only make sense on a
+    blog post. Structure mirrors `blogroll.html` minus the links list.
+-#}
+{% extends "base.html" %}
+
+{%- block title -%}
+{{ page.title }} | {{ config.title }}
+{%- endblock -%}
+
+{%- block description -%}
+    {%- if page.description %}
+    <meta name="description" content="{{ page.description | markdown(inline=true) | striptags }}">
+    {%- elif config.description %}
+    <meta name="description" content="{{ config.description }}">
+    {%- endif %}
+{%- endblock -%}
+
+{%- block main -%}
+{%- filter indent -%}{%- filter indent -%}
+<article class="content {%- if page.extra.framed %} framed{%- endif -%}">
+    {{ page.content | indent | safe }}
+</article>
+{% endfilter %}{% endfilter %}
+{%- endblock -%}

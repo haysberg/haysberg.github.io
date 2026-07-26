@@ -6,9 +6,13 @@
 
     The banner is a plain <img> rather than the theme's `header_logo`, which
     swaps out the title text and is capped at one line-height. Dimensions are
-    hardcoded to reserve the space before the image loads: Zola's
-    `get_image_metadata` can't read AVIF. Re-measure with
-    `ffprobe -show_entries stream=width,height` if the file is replaced. -#}
+    hardcoded to reserve the space before the image loads; re-measure with
+    `ffprobe -show_entries stream=width,height` if the file is replaced.
+
+    They could instead come from `get_image_metadata`, which does read AVIF.
+    What doesn't work on AVIF is `resize_image` ("Failed to read image"), so
+    the theme's `responsive_image` shortcode can't take an AVIF source -- that
+    is why this is a single fixed-width <img> and not a srcset. -#}
 {% if config.extra.header_banner -%}
 <img class="header-banner"
      src="{{ get_url(path=config.extra.header_banner, cachebust=true) }}"

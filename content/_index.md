@@ -11,7 +11,9 @@ max_posts = 5
 
 ┬┴┬┴┤•ᴥ•ʔ├┬┴┬┴
 
-Hello, I'm Téo, an SRE mad scientist.
+Hello, I'm Téo. Nice to meet you !
+
+I love writing YAML, politics, and tinkering with home servers / cheap computers.
 
 I mostly use 𝖐𝖚𝖇𝖊𝖗𝖓𝖊𝖙𝖊𝖘 and other tools such as 𝖆𝖓𝖘𝖎𝖇𝖑𝖊 and 𝖙𝖊𝖗𝖗𝖆𝖋𝖔𝖗𝖒 because I'm a (つ▀¯▀ )つ 🔥 cool kid 🔥
 

@@ -52,6 +52,7 @@ copyright = "(🌸˵•́◡•̀˵)━━━✧.*✨"
 main_menu = [
     { name = "📜blog", url = "blog", trailing_slash = true },
     { name = "🌞resume", url = "cool_resume.pdf", new_tab = true },
+    { name = "🔧projects", url = "projects", trailing_slash = true },
     { name = "🐙github", url = "https://github.com/haysberg", new_tab = true },
     { name = "🌃linkedin", url = "https://www.linkedin.com/in/teo-hays", new_tab = true },
     { name = "💌email", url = "mailto:teo@haysberg.io" },

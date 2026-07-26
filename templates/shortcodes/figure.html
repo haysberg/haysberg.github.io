@@ -1,0 +1,18 @@
+{#- An image with a caption rendered below it.
+
+     The theme's `responsive_image` shortcode can't be used for our photos:
+     Zola's `resize_image` has no AVIF decoder, so it fails to read the source.
+     This shortcode does no image processing, so it takes any `src` that works
+     in plain markdown -- i.e. a path under `static/`.
+
+     Caption text goes through the inline markdown filter, so links and
+     emphasis work. `<figure>` / `<figcaption>` are already styled by the
+     theme (sass/css/_main.scss). -#}
+
+{%- set lazy_load = lazy | default(value=true) -%}
+<figure>
+    <img src="{{ src | safe }}" alt="{{ alt }}"{% if lazy_load %} loading="lazy"{% else %} fetchpriority="high"{% endif %}>
+    <figcaption>
+        <p>{{ caption | markdown(inline=true) | safe }}</p>
+    </figcaption>
+</figure>
