@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>teo@interwebs - glazing</title>
+    <subtitle>YAML technopriest</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://haysberg.io/tags/glazing/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://haysberg.io/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-07-26T00:00:00+00:00</updated>
+    <id>https://haysberg.io/tags/glazing/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Glazing tools, Part I: KDE &amp; Kinoite</title>
+        <published>2026-07-26T00:00:00+00:00</published>
+        <updated>2026-07-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Téo Haÿs
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://haysberg.io/blog/kde/"/>
+        <id>https://haysberg.io/blog/kde/</id>
+        
+        <content type="html" xml:base="https://haysberg.io/blog/kde/">&lt;p&gt;I have been wanting to write some blog posts for a long time now, and I haven&#x27;t been entirely sure what to write about. So I&#x27;ve decided to let happiness win for once and write about stuff I love in this series.&lt;&#x2F;p&gt;
+&lt;p&gt;Turns out there are a lot of tools that I have replaced over the ~10 years I&#x27;ve spent in computer science, and that I don&#x27;t think I could ever come back to, given how great their replacements are. Hence the &quot;Part I&quot;: I just don&#x27;t see myself finishing this article in my lifetime if I have to list all of them (especially since the list keeps moving as some parts get replaced).&lt;&#x2F;p&gt;
+&lt;p&gt;I have decided that this first article would be about the software I am most fond of: Fedora Kinoite and KDE.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-is-a-good-tool-anyway&quot;&gt;What is a &quot;good tool&quot; anyway?&lt;a class=&quot;post-anchor&quot; href=&quot;#what-is-a-good-tool-anyway&quot; aria-label=&quot;Anchor link for: what-is-a-good-tool-anyway&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;The easy answer would be that it&#x27;s whatever works for you, so I&#x27;ll just give you my list of criteria when I&#x27;m evaluating software.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Is the software easy to install through package managers I already have on my machine (brew, dnf, flatpak)? If not, I am not using your project.&lt;&#x2F;li&gt;
+&lt;li&gt;Are the default settings sensible, or do I have to tweak your project for hours to make it work? This also includes configuration files. I like to have choice, but I want the choices you make for me to be good enough as well.&lt;&#x2F;li&gt;
+&lt;li&gt;Is my distro already shipping something similar? If so, you can be 99% sure it won&#x27;t touch my system.&lt;&#x2F;li&gt;
+&lt;li&gt;Does it work well? It should be fast and not crash every day. If it doesn&#x27;t, I&#x27;ll probably find an alternative in a couple of weeks and yeet it off my computer.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Overall, I just don&#x27;t like installing new stuff on my machine unless I actively encounter issues with what I&#x27;m using right now. I also like my routine, and I have a job, which means I don&#x27;t want to spend hours learning something that I am not absolutely sure will make my life easier. This is what has kept me from investing my time in &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.jj-vcs.dev&#x2F;latest&#x2F;&quot;&gt;Jujutsu&lt;&#x2F;a&gt; &amp;amp; &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;nixos.org&#x2F;&quot;&gt;NixOS&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;distro-hopping&quot;&gt;Distro-hopping&lt;a class=&quot;post-anchor&quot; href=&quot;#distro-hopping&quot; aria-label=&quot;Anchor link for: distro-hopping&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;Having said that, I really like the software I use to be as up-to-date as possible. I experimented with a ton of different distros at the start of my computer journey, trying to find the right balance between stability and up-to-date packages.&lt;&#x2F;p&gt;
+&lt;p&gt;Here are the ones I can remember running:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.debian.org&#x2F;&quot;&gt;Debian&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;ubuntu.com&#x2F;desktop&#x2F;flavors&quot;&gt;Ubuntu &amp;amp; almost all variants&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;archiveos.org&#x2F;chaletos&#x2F;&quot;&gt;ChaletOS&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;zorin.com&#x2F;os&#x2F;&quot;&gt;Zorin&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.linuxmint.com&#x2F;&quot;&gt;Linux Mint&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;manjaro.org&#x2F;&quot;&gt;Manjaro&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mxlinux.org&#x2F;&quot;&gt;MX Linux&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;system76.com&#x2F;pop&quot;&gt;Pop!_OS&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.slitaz.org&quot;&gt;SliTaz&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;I was getting burnt out from distro-hopping every other week and couldn&#x27;t find anything that really satisfied me. For some reason, I had never touched &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;fedoraproject.org&#x2F;&quot;&gt;Fedora&lt;&#x2F;a&gt; — I thought it was some kind of niche distro, especially since it was backed by Red Hat. I finally decided to give it a try anyway.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;tophat-fedora-my-beloved&quot;&gt;🎩 Fedora my beloved&lt;a class=&quot;post-anchor&quot; href=&quot;#tophat-fedora-my-beloved&quot; aria-label=&quot;Anchor link for: tophat-fedora-my-beloved&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;Fedora has been the only distro I have installed on my machines for around 4 years now. The up-to-date packages (especially the DE), the polish on the system, the easy updates (Ubuntu used to explode whenever I tried to run &lt;code&gt;sudo do-release-upgrade&lt;&#x2F;code&gt;) — it&#x27;s all been super great.&lt;&#x2F;p&gt;
+&lt;p&gt;I first gave &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;fedoraproject.org&#x2F;atomic-desktops&#x2F;silverblue&#x2F;&quot;&gt;Fedora Silverblue&lt;&#x2F;a&gt; a try around 2023, which was inconclusive as I had trouble wrapping my head around how to properly install my packages and all that. I decided to give it another go around a year ago — this time using &lt;code&gt;brew&lt;&#x2F;code&gt; for CLI tools — and given that I had grown tired of GNOME for a ton of different reasons, I started using &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;fedoraproject.org&#x2F;atomic-desktops&#x2F;kinoite&#x2F;&quot;&gt;Kinoite&lt;&#x2F;a&gt; instead.&lt;&#x2F;p&gt;
+&lt;p&gt;It works like a charm. I can roll back my kernel and &lt;strong&gt;all of my packages&lt;&#x2F;strong&gt; if something goes wrong — it &lt;u&gt;never&lt;&#x2F;u&gt; has — and most importantly, it forces me to manage my packages &lt;em&gt;the right way&lt;&#x2F;em&gt;: Flatpak for GUI apps, brew for everything else.&lt;&#x2F;p&gt;
+&lt;p&gt;My &lt;code&gt;dnf&lt;&#x2F;code&gt; packages are the ones shipped with my distro. I don&#x27;t touch them at all, I don&#x27;t risk hitting dependency hell, and I will simply &lt;em&gt;never&lt;&#x2F;em&gt; run into conflicts. Some might say it takes a bit more disk space to run all that — that installing my &lt;code&gt;brew&lt;&#x2F;code&gt; and &lt;code&gt;flatpak&lt;&#x2F;code&gt; packages through DNF on a regular Fedora install would use less — but I couldn&#x27;t care less. I have a 1TB SSD inside my laptop, and I will never use more than half of it, even after several years.&lt;&#x2F;p&gt;
+&lt;p&gt;Also, it means if a &lt;code&gt;brew&lt;&#x2F;code&gt; package exists on my Mac I can almost certainly install it on Kinoite too, and use it for my personal projects.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Just to drive this point home: I do not have to hunt for a &lt;code&gt;.deb&lt;&#x2F;code&gt; or a &lt;code&gt;.rpm&lt;&#x2F;code&gt; file anymore. Like, it hasn&#x27;t happened to me in a year and a half since I started using immutable Fedora installs. This is such a relief I cannot overstate it.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;If I need a mutable system, or some kind of sandbox (which I do when I run Kali for pentesting), I use &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;distrobox.it&#x2F;&quot;&gt;Distrobox&lt;&#x2F;a&gt;, which works without hiccups. I understand the concepts behind dev containers, but old habits die hard, so besides the Kali container, I run everything on my bare OS.&lt;&#x2F;p&gt;
+&lt;p&gt;Bottom line: it&#x27;s super stable, it&#x27;s up-to-date, and it ships with nearly everything I need.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;moving-away-from-gnome&quot;&gt;Moving away from GNOME&lt;a class=&quot;post-anchor&quot; href=&quot;#moving-away-from-gnome&quot; aria-label=&quot;Anchor link for: moving-away-from-gnome&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;I have tried quite a lot of DEs over the years — even though I have always been repulsed by tiling window managers, since I have a mouse and might as well use it — and they all had issues:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;no support for Wayland (which means some GUI apps have weird bugs)&lt;&#x2F;li&gt;
+&lt;li&gt;low maintainer count, which means there aren&#x27;t a ton of new features and bugs take a long time to get fixed&lt;&#x2F;li&gt;
+&lt;li&gt;old design that makes me feel like I&#x27;m on a 2006 computer running Windows XP (and not in a good way)&lt;&#x2F;li&gt;
+&lt;li&gt;bad integration of themes across the whole UX: half-themed taskbar icons, missing animations, few customization options&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I do use Windows and macOS pretty much daily. I work on macOS during my day job, and I run Windows to play games. Even though those systems have flaws that sometimes create friction, they also bring stuff that I now just expect from any serious project — and almost all DEs miss the mark.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;For years I used GNOME, especially when I was still a student: the gestures and the fact that there was pretty much nothing on the screen besides the small top bar meant I could have as much free screen space as possible to display my content. And on a setup where I only had my laptop screen to work with, GNOME was the most efficient way of navigating my windows when I was in class, which made it my go-to DE for around 3 years.&lt;&#x2F;p&gt;
+&lt;p&gt;But now things have changed. I work remotely, and almost never use my laptop without peripherals. I don&#x27;t really &lt;em&gt;need&lt;&#x2F;em&gt; the gestures. Now that I have a proper mouse and keyboard I&#x27;d rather have a DE that is actually feature-complete.&lt;&#x2F;p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;&#x2F;photos&#x2F;kde&#x2F;desk-setup.avif&quot; alt=&quot;My desk setup&quot; loading=&quot;lazy&quot;&gt;
+    &lt;figcaption&gt;
+        &lt;p&gt;My desk setup — fucking awesome.&lt;&#x2F;p&gt;
+    &lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;I grew tired of having to install plugins for every basic task, especially since they pretty much all broke whenever I updated Fedora (which I never understood — every version has a preview for several weeks). Like, come on, I need a plugin for the taskbar to show up without me pressing the Super key?&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;kde&quot;&gt;KDE&lt;a class=&quot;post-anchor&quot; href=&quot;#kde&quot; aria-label=&quot;Anchor link for: kde&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;So the only DE that was left for me to use was KDE. And it has been so much better overall, oh my god. It&#x27;s like the Windows 7 feeling, but modern and complete. I get a ton of customization options (I don&#x27;t use many, but I like to change some stuff) and most importantly it is &lt;strong&gt;complete, out of the box&lt;&#x2F;strong&gt;. I don&#x27;t need &lt;em&gt;any&lt;&#x2F;em&gt; plugin, and I don&#x27;t have any. Everything I need is already available, and more! Here is a non-exhaustive list of stuff that, in my opinion, is unmatched anywhere else.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;kde-apps&quot;&gt;KDE Apps&lt;a class=&quot;post-anchor&quot; href=&quot;#kde-apps&quot; aria-label=&quot;Anchor link for: kde-apps&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;apps.kde.org&#x2F;konsole&#x2F;&quot;&gt;Konsole&lt;&#x2F;a&gt; ships with KDE, works out of the box, and is highly customizable (with a UI and not a config file, looking at you &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;ghostty.org&#x2F;&quot;&gt;Ghostty&lt;&#x2F;a&gt;). I can split panes, open tabs, it looks good, and I can replicate my input across panes if needed, which has saved me so much time during production outages in my past job.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;apps.kde.org&#x2F;okular&#x2F;&quot;&gt;Okular&lt;&#x2F;a&gt;, &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;apps.kde.org&#x2F;skanpage&#x2F;&quot;&gt;Skanpage&lt;&#x2F;a&gt; &amp;amp; &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;apps.kde.org&#x2F;kwrite&#x2F;&quot;&gt;KWrite&lt;&#x2F;a&gt; do exactly what I expect from a PDF viewer, scanner interface, and notepad. They each do one thing, and they do it well.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;apps.kde.org&#x2F;gwenview&#x2F;&quot;&gt;Gwenview&lt;&#x2F;a&gt; allows me to crop an image, rotate it... Basically what I have been able to do on my phone for ages to edit photos, I can do directly from there. The rest of the time, if I just want to open an image, it stays out of my way. I know there&#x27;s software to do that on other OSes, Linux included, but it&#x27;s packaged by default on my system!&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It&#x27;s not a shitty image viewer with no tools at all, one that would force me to look for an alternative, install it, and then leave it sitting on my computer for ages until I need it again in 3 months.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;apps.kde.org&#x2F;plasma-systemmonitor&#x2F;&quot;&gt;Plasma System Monitor&lt;&#x2F;a&gt; allows me to add panes and customize it as I need if I want more data — but with sensible defaults. This is crazy, but before I used KDE I couldn&#x27;t even imagine it would be possible (let alone an improvement) to customize a system monitor.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-little-details-that-add-up&quot;&gt;The little details that add up&lt;a class=&quot;post-anchor&quot; href=&quot;#the-little-details-that-add-up&quot; aria-label=&quot;Anchor link for: the-little-details-that-add-up&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;Taskbar customizations: I don&#x27;t change a ton of settings there, but I have a simple media player integration and a per-core CPU graph. I can get rid of system icons I don&#x27;t want and just tuck them in a foldable menu. It does exactly what I want. When I plug in a wireless controller, it shows the remaining battery (crazy to me that Windows hasn&#x27;t added that yet).
+&lt;figure&gt;
+    &lt;img src=&quot;&#x2F;photos&#x2F;kde&#x2F;kde1.png&quot; alt=&quot;KDE audio panel showing per-device and per-app volume controls&quot; loading=&quot;lazy&quot;&gt;
+    &lt;figcaption&gt;
+        &lt;p&gt;Device and app volume control in the same panel? You can even test your mic in there!&lt;&#x2F;p&gt;
+    &lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;The settings app: everything is in there, I love it. It&#x27;s just one app that has all of my system settings in one place. Given how many dialogs I have to go through to do basic stuff on pretty much every other system (except macOS, which just... locks you out of tons of options) it&#x27;s a breath of fresh air to have the Settings app actually allow me to change my settings.
+&lt;figure&gt;
+    &lt;img src=&quot;&#x2F;photos&#x2F;kde&#x2F;ksettings.png&quot; alt=&quot;The KDE System Settings app on its Quick Settings page, showing theme, animation speed and click behaviour options, with every settings category listed in the sidebar&quot; loading=&quot;lazy&quot;&gt;
+    &lt;figcaption&gt;
+        &lt;p&gt;How hard was it to do the same, Microsoft? smh my head&lt;&#x2F;p&gt;
+    &lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;&#x2F;p&gt;
+&lt;p&gt;KInfoCenter: I can actually get details on every component of my system right from a single app. Do you know how many times I&#x27;ve had to run obscure software on my friends&#x27; computers to get a somewhat complete list of the hardware they have? This is a lifesaver as well. When I troubleshoot my friend&#x27;s grandpa&#x27;s computer, I can just open this bad boy up and check which hardware they have before ordering a replacement.
+&lt;figure&gt;
+    &lt;img src=&quot;&#x2F;photos&#x2F;kde&#x2F;kinfocenter.png&quot; alt=&quot;KInfoCenter&amp;#x27;s Memory page, listing each RAM module in full: type, size, speed, voltage, manufacturer and part number&quot; loading=&quot;lazy&quot;&gt;
+    &lt;figcaption&gt;
+        &lt;p&gt;Look at all the info I can get on my RAM, I never saw so much with any other GUI tool. It&#x27;s so efficient.&lt;&#x2F;p&gt;
+    &lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;a class=&quot;post-anchor&quot; href=&quot;#conclusion&quot; aria-label=&quot;Anchor link for: conclusion&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;Overall, those are all the things that make my computer feel comfy. I don&#x27;t need to install a lot of external tools; pretty much all of the features I want are already packed in — until new ones I didn&#x27;t even realize I needed are added by the KDE team.&lt;&#x2F;p&gt;
+&lt;p&gt;I hope my article has convinced you to give Kinoite — or at least KDE — a try, especially if you don&#x27;t play games that require kernel-level anticheat. If you do, installing any distro on your gaming computer is not a good idea.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Also, you should know some of those anticheats have &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.trendmicro.com&#x2F;en_us&#x2F;research&#x2F;22&#x2F;h&#x2F;ransomware-actor-abuses-genshin-impact-anti-cheat-driver-to-kill-antivirus.html&quot;&gt;already been abused in the past&lt;&#x2F;a&gt; to push malware on your beloved war machine.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;If you&#x27;re not one of the unfortunate people stuck on Summoner&#x27;s Rift or Genshin Impact, I want to tell you that the people I know who moved away from Windows to Kinoite have never felt better using their computers. You could be feeling just like them if you give Linux a try!&lt;&#x2F;p&gt;
+&lt;p&gt;And if you&#x27;re already using KDE and are enjoying it as much as I am, consider &lt;a class=&quot;external&quot; rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;kde.org&#x2F;donate&#x2F;&quot;&gt;making a donation&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;See you next time, and in the meantime, take care&lt;&#x2F;em&gt; ( &amp;gt;؂•̀ )&lt;&#x2F;p&gt;
+&lt;p&gt;Téo 💖&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

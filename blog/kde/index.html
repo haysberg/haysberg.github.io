@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src-attr 'unsafe-inline'">
+
+    <title>Glazing tools, Part I: KDE &amp; Kinoite | teo@interwebs</title>
+
+    <link rel="preload" href="https://haysberg.io/fonts/FiraCode-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="https://haysberg.io/fonts/FiraCode-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://haysberg.io/css/style.css?h=6d2221c78b109beb6d13">
+    <link rel="stylesheet" href="https://haysberg.io/css/custom.css?h=1250b45cd890183c05c3">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌶️</text></svg>">
+    <script src="https://haysberg.io/js/auto-close-popover-on-resize.js?h=4ef87d6fc7b98b22e044" defer></script>
+    <script src="https://haysberg.io/js/copy-code-to-clipboard.js?h=6eec6d5a29e934c1de32" defer></script>
+
+    <link rel="canonical" href="https://haysberg.io/blog/kde/">
+    <link rel="alternate" type="application/atom+xml" href="https://haysberg.io/atom.xml" title="teo@interwebs">
+    
+    <meta name="author" content="Téo Haÿs">
+    <meta name="description" content="Sharing some love on tools that make me feel comfy">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#211f1a">
+    <meta name="color-scheme" content="dark">
+
+    <meta property="og:title" content="Glazing tools, Part I: KDE &amp; Kinoite">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://haysberg.io/blog/kde/">
+    <meta property="og:description" content="Sharing some love on tools that make me feel comfy">
+    <meta property="og:site_name" content="teo@interwebs">
+    <meta property="og:updated_time" content="2026-07-26T12:19:11.875625890+00:00">
+    <meta property="article:published_time" content="2026-07-26T00:00:00+00:00">
+    <meta property="article:tag" content="glazing">
+    <meta property="article:tag" content="fedora">
+    <meta property="article:tag" content="kde">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Téo Haÿs">
+    <meta name="twitter:label2" content="Reading time">
+    <meta name="twitter:data2" content="12 min">
+</head>
+
+<body class="layout-center" data-theme="terminus">
+    <header class="header">
+        
+        <img class="header-banner"
+             src="https://haysberg.io/images/header.avif?h=4713570b8424165b2b66"
+             alt="Pastel sunset over a treeline, with a siren pole and power lines in silhouette"
+             width="1568" height="412"
+             decoding="async" fetchpriority="high">
+        <div class="header-container">
+            <span class="header-logo-container">
+                <a href="https://haysberg.io">
+                    <span class="logo">💽 teo@interwebs</span>
+                </a>
+            </span>
+        </div>
+
+        <nav class="main-menu" aria-label="Main Menu">
+            <a class="skip-to-content" href="#main">Skip to main content</a>
+            <button class="main-menu-dropdown-button" popovertarget="nav-menu">Menu</button>
+            <ul id="nav-menu" class="main-menu-items" aria-label="Site Navigation" popover>
+                <li><a href="https://haysberg.io/blog/">📜blog</a></li>
+                <li><a href="https://haysberg.io/cool_resume.pdf" target="_blank">🌞resume</a></li>
+                <li><a href="https://haysberg.io/projects/">🔧projects</a></li>
+                <li><a href="https://github.com/haysberg" target="_blank">🐙github</a></li>
+                <li><a href="https://www.linkedin.com/in/teo-hays" target="_blank">🌃linkedin</a></li>
+                <li><a href="mailto:teo@haysberg.io">💌email</a></li>
+                <li><a href="https://haysberg.io/blogroll/">🫶blogroll</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <article class="post content">
+            <header>
+                <h1 class="post-title">
+                    <a href="https://haysberg.io/blog/kde/">Glazing tools, Part I: KDE &amp; Kinoite</a>
+                </h1>
+                <ul class="post-meta hidden">
+                    <li title="Published on 2026-07-26"><time datetime="2026-07-26">2026.07.26</time></li>
+                    <li role="separator" aria-hidden="true">::</li>
+                    <li title="2,213 words"><time datetime="PT12M">12 min</time> read</li>
+                </ul>
+                <div class="post-tags">
+                    <span>#<a rel="tag" href="https://haysberg.io/tags/glazing/">glazing</a></span>
+                    <span>#<a rel="tag" href="https://haysberg.io/tags/fedora/">fedora</a></span>
+                    <span>#<a rel="tag" href="https://haysberg.io/tags/kde/">kde</a></span>
+                </div>
+            </header>
+
+<p>I have been wanting to write some blog posts for a long time now, and I haven't been entirely sure what to write about. So I've decided to let happiness win for once and write about stuff I love in this series.</p>
+<p>Turns out there are a lot of tools that I have replaced over the ~10 years I've spent in computer science, and that I don't think I could ever come back to, given how great their replacements are. Hence the "Part I": I just don't see myself finishing this article in my lifetime if I have to list all of them (especially since the list keeps moving as some parts get replaced).</p>
+<p>I have decided that this first article would be about the software I am most fond of: Fedora Kinoite and KDE.</p>
+<h2 id="what-is-a-good-tool-anyway">What is a "good tool" anyway?<a class="post-anchor" href="#what-is-a-good-tool-anyway" aria-label="Anchor link for: what-is-a-good-tool-anyway"><span aria-hidden="true">#</span></a>
+</h2>
+<p>The easy answer would be that it's whatever works for you, so I'll just give you my list of criteria when I'm evaluating software.</p>
+<ul>
+<li>Is the software easy to install through package managers I already have on my machine (brew, dnf, flatpak)? If not, I am not using your project.</li>
+<li>Are the default settings sensible, or do I have to tweak your project for hours to make it work? This also includes configuration files. I like to have choice, but I want the choices you make for me to be good enough as well.</li>
+<li>Is my distro already shipping something similar? If so, you can be 99% sure it won't touch my system.</li>
+<li>Does it work well? It should be fast and not crash every day. If it doesn't, I'll probably find an alternative in a couple of weeks and yeet it off my computer.</li>
+</ul>
+<p>Overall, I just don't like installing new stuff on my machine unless I actively encounter issues with what I'm using right now. I also like my routine, and I have a job, which means I don't want to spend hours learning something that I am not absolutely sure will make my life easier. This is what has kept me from investing my time in <a class="external" rel="external" href="https://www.jj-vcs.dev/latest/">Jujutsu</a> &amp; <a class="external" rel="external" href="https://nixos.org/">NixOS</a>.</p>
+<h2 id="distro-hopping">Distro-hopping<a class="post-anchor" href="#distro-hopping" aria-label="Anchor link for: distro-hopping"><span aria-hidden="true">#</span></a>
+</h2>
+<p>Having said that, I really like the software I use to be as up-to-date as possible. I experimented with a ton of different distros at the start of my computer journey, trying to find the right balance between stability and up-to-date packages.</p>
+<p>Here are the ones I can remember running:</p>
+<ul>
+<li><a class="external" rel="external" href="https://www.debian.org/">Debian</a></li>
+<li><a class="external" rel="external" href="https://ubuntu.com/desktop/flavors">Ubuntu &amp; almost all variants</a></li>
+<li><a class="external" rel="external" href="https://archiveos.org/chaletos/">ChaletOS</a></li>
+<li><a class="external" rel="external" href="https://zorin.com/os/">Zorin</a></li>
+<li><a class="external" rel="external" href="https://www.linuxmint.com/">Linux Mint</a></li>
+<li><a class="external" rel="external" href="https://manjaro.org/">Manjaro</a></li>
+<li><a class="external" rel="external" href="https://mxlinux.org/">MX Linux</a></li>
+<li><a class="external" rel="external" href="https://system76.com/pop">Pop!_OS</a></li>
+<li><a class="external" rel="external" href="https://www.slitaz.org">SliTaz</a></li>
+</ul>
+<p>I was getting burnt out from distro-hopping every other week and couldn't find anything that really satisfied me. For some reason, I had never touched <a class="external" rel="external" href="https://fedoraproject.org/">Fedora</a> — I thought it was some kind of niche distro, especially since it was backed by Red Hat. I finally decided to give it a try anyway.</p>
+<h2 id="tophat-fedora-my-beloved">🎩 Fedora my beloved<a class="post-anchor" href="#tophat-fedora-my-beloved" aria-label="Anchor link for: tophat-fedora-my-beloved"><span aria-hidden="true">#</span></a>
+</h2>
+<p>Fedora has been the only distro I have installed on my machines for around 4 years now. The up-to-date packages (especially the DE), the polish on the system, the easy updates (Ubuntu used to explode whenever I tried to run <code>sudo do-release-upgrade</code>) — it's all been super great.</p>
+<p>I first gave <a class="external" rel="external" href="https://fedoraproject.org/atomic-desktops/silverblue/">Fedora Silverblue</a> a try around 2023, which was inconclusive as I had trouble wrapping my head around how to properly install my packages and all that. I decided to give it another go around a year ago — this time using <code>brew</code> for CLI tools — and given that I had grown tired of GNOME for a ton of different reasons, I started using <a class="external" rel="external" href="https://fedoraproject.org/atomic-desktops/kinoite/">Kinoite</a> instead.</p>
+<p>It works like a charm. I can roll back my kernel and <strong>all of my packages</strong> if something goes wrong — it <u>never</u> has — and most importantly, it forces me to manage my packages <em>the right way</em>: Flatpak for GUI apps, brew for everything else.</p>
+<p>My <code>dnf</code> packages are the ones shipped with my distro. I don't touch them at all, I don't risk hitting dependency hell, and I will simply <em>never</em> run into conflicts. Some might say it takes a bit more disk space to run all that — that installing my <code>brew</code> and <code>flatpak</code> packages through DNF on a regular Fedora install would use less — but I couldn't care less. I have a 1TB SSD inside my laptop, and I will never use more than half of it, even after several years.</p>
+<p>Also, it means if a <code>brew</code> package exists on my Mac I can almost certainly install it on Kinoite too, and use it for my personal projects.</p>
+<blockquote>
+<p>Just to drive this point home: I do not have to hunt for a <code>.deb</code> or a <code>.rpm</code> file anymore. Like, it hasn't happened to me in a year and a half since I started using immutable Fedora installs. This is such a relief I cannot overstate it.</p>
+</blockquote>
+<p>If I need a mutable system, or some kind of sandbox (which I do when I run Kali for pentesting), I use <a class="external" rel="external" href="https://distrobox.it/">Distrobox</a>, which works without hiccups. I understand the concepts behind dev containers, but old habits die hard, so besides the Kali container, I run everything on my bare OS.</p>
+<p>Bottom line: it's super stable, it's up-to-date, and it ships with nearly everything I need.</p>
+<h2 id="moving-away-from-gnome">Moving away from GNOME<a class="post-anchor" href="#moving-away-from-gnome" aria-label="Anchor link for: moving-away-from-gnome"><span aria-hidden="true">#</span></a>
+</h2>
+<p>I have tried quite a lot of DEs over the years — even though I have always been repulsed by tiling window managers, since I have a mouse and might as well use it — and they all had issues:</p>
+<ul>
+<li>no support for Wayland (which means some GUI apps have weird bugs)</li>
+<li>low maintainer count, which means there aren't a ton of new features and bugs take a long time to get fixed</li>
+<li>old design that makes me feel like I'm on a 2006 computer running Windows XP (and not in a good way)</li>
+<li>bad integration of themes across the whole UX: half-themed taskbar icons, missing animations, few customization options</li>
+</ul>
+<blockquote>
+<p>I do use Windows and macOS pretty much daily. I work on macOS during my day job, and I run Windows to play games. Even though those systems have flaws that sometimes create friction, they also bring stuff that I now just expect from any serious project — and almost all DEs miss the mark.</p>
+</blockquote>
+<p>For years I used GNOME, especially when I was still a student: the gestures and the fact that there was pretty much nothing on the screen besides the small top bar meant I could have as much free screen space as possible to display my content. And on a setup where I only had my laptop screen to work with, GNOME was the most efficient way of navigating my windows when I was in class, which made it my go-to DE for around 3 years.</p>
+<p>But now things have changed. I work remotely, and almost never use my laptop without peripherals. I don't really <em>need</em> the gestures. Now that I have a proper mouse and keyboard I'd rather have a DE that is actually feature-complete.</p>
+<figure>
+    <img src="/photos/kde/desk-setup.avif" alt="My desk setup" loading="lazy">
+    <figcaption>
+        <p>My desk setup — fucking awesome.</p>
+    </figcaption>
+</figure>
+<p>I grew tired of having to install plugins for every basic task, especially since they pretty much all broke whenever I updated Fedora (which I never understood — every version has a preview for several weeks). Like, come on, I need a plugin for the taskbar to show up without me pressing the Super key?</p>
+<h2 id="kde">KDE<a class="post-anchor" href="#kde" aria-label="Anchor link for: kde"><span aria-hidden="true">#</span></a>
+</h2>
+<p>So the only DE that was left for me to use was KDE. And it has been so much better overall, oh my god. It's like the Windows 7 feeling, but modern and complete. I get a ton of customization options (I don't use many, but I like to change some stuff) and most importantly it is <strong>complete, out of the box</strong>. I don't need <em>any</em> plugin, and I don't have any. Everything I need is already available, and more! Here is a non-exhaustive list of stuff that, in my opinion, is unmatched anywhere else.</p>
+<h3 id="kde-apps">KDE Apps<a class="post-anchor" href="#kde-apps" aria-label="Anchor link for: kde-apps"><span aria-hidden="true">#</span></a>
+</h3>
+<p><a class="external" rel="external" href="https://apps.kde.org/konsole/">Konsole</a> ships with KDE, works out of the box, and is highly customizable (with a UI and not a config file, looking at you <a class="external" rel="external" href="https://ghostty.org/">Ghostty</a>). I can split panes, open tabs, it looks good, and I can replicate my input across panes if needed, which has saved me so much time during production outages in my past job.</p>
+<p><a class="external" rel="external" href="https://apps.kde.org/okular/">Okular</a>, <a class="external" rel="external" href="https://apps.kde.org/skanpage/">Skanpage</a> &amp; <a class="external" rel="external" href="https://apps.kde.org/kwrite/">KWrite</a> do exactly what I expect from a PDF viewer, scanner interface, and notepad. They each do one thing, and they do it well.</p>
+<p><a class="external" rel="external" href="https://apps.kde.org/gwenview/">Gwenview</a> allows me to crop an image, rotate it... Basically what I have been able to do on my phone for ages to edit photos, I can do directly from there. The rest of the time, if I just want to open an image, it stays out of my way. I know there's software to do that on other OSes, Linux included, but it's packaged by default on my system!</p>
+<blockquote>
+<p>It's not a shitty image viewer with no tools at all, one that would force me to look for an alternative, install it, and then leave it sitting on my computer for ages until I need it again in 3 months.</p>
+</blockquote>
+<p><a class="external" rel="external" href="https://apps.kde.org/plasma-systemmonitor/">Plasma System Monitor</a> allows me to add panes and customize it as I need if I want more data — but with sensible defaults. This is crazy, but before I used KDE I couldn't even imagine it would be possible (let alone an improvement) to customize a system monitor.</p>
+<h3 id="the-little-details-that-add-up">The little details that add up<a class="post-anchor" href="#the-little-details-that-add-up" aria-label="Anchor link for: the-little-details-that-add-up"><span aria-hidden="true">#</span></a>
+</h3>
+<p>Taskbar customizations: I don't change a ton of settings there, but I have a simple media player integration and a per-core CPU graph. I can get rid of system icons I don't want and just tuck them in a foldable menu. It does exactly what I want. When I plug in a wireless controller, it shows the remaining battery (crazy to me that Windows hasn't added that yet).
+<figure>
+    <img src="/photos/kde/kde1.png" alt="KDE audio panel showing per-device and per-app volume controls" loading="lazy">
+    <figcaption>
+        <p>Device and app volume control in the same panel? You can even test your mic in there!</p>
+    </figcaption>
+</figure>
+</p>
+<p>The settings app: everything is in there, I love it. It's just one app that has all of my system settings in one place. Given how many dialogs I have to go through to do basic stuff on pretty much every other system (except macOS, which just... locks you out of tons of options) it's a breath of fresh air to have the Settings app actually allow me to change my settings.
+<figure>
+    <img src="/photos/kde/ksettings.png" alt="The KDE System Settings app on its Quick Settings page, showing theme, animation speed and click behaviour options, with every settings category listed in the sidebar" loading="lazy">
+    <figcaption>
+        <p>How hard was it to do the same, Microsoft? smh my head</p>
+    </figcaption>
+</figure>
+</p>
+<p>KInfoCenter: I can actually get details on every component of my system right from a single app. Do you know how many times I've had to run obscure software on my friends' computers to get a somewhat complete list of the hardware they have? This is a lifesaver as well. When I troubleshoot my friend's grandpa's computer, I can just open this bad boy up and check which hardware they have before ordering a replacement.
+<figure>
+    <img src="/photos/kde/kinfocenter.png" alt="KInfoCenter&#x27;s Memory page, listing each RAM module in full: type, size, speed, voltage, manufacturer and part number" loading="lazy">
+    <figcaption>
+        <p>Look at all the info I can get on my RAM, I never saw so much with any other GUI tool. It's so efficient.</p>
+    </figcaption>
+</figure>
+</p>
+<h2 id="conclusion">Conclusion<a class="post-anchor" href="#conclusion" aria-label="Anchor link for: conclusion"><span aria-hidden="true">#</span></a>
+</h2>
+<p>Overall, those are all the things that make my computer feel comfy. I don't need to install a lot of external tools; pretty much all of the features I want are already packed in — until new ones I didn't even realize I needed are added by the KDE team.</p>
+<p>I hope my article has convinced you to give Kinoite — or at least KDE — a try, especially if you don't play games that require kernel-level anticheat. If you do, installing any distro on your gaming computer is not a good idea.</p>
+<blockquote>
+<p>Also, you should know some of those anticheats have <a class="external" rel="external" href="https://www.trendmicro.com/en_us/research/22/h/ransomware-actor-abuses-genshin-impact-anti-cheat-driver-to-kill-antivirus.html">already been abused in the past</a> to push malware on your beloved war machine.</p>
+</blockquote>
+<p>If you're not one of the unfortunate people stuck on Summoner's Rift or Genshin Impact, I want to tell you that the people I know who moved away from Windows to Kinoite have never felt better using their computers. You could be feeling just like them if you give Linux a try!</p>
+<p>And if you're already using KDE and are enjoying it as much as I am, consider <a class="external" rel="external" href="https://kde.org/donate/">making a donation</a>.</p>
+<p><em>See you next time, and in the meantime, take care</em> ( &gt;؂•̀ )</p>
+<p>Téo 💖</p>
+
+        </article>
+    </main>
+    <footer class="footer">
+        <address class="socials">
+            <ul>
+                <li>
+                    <a class="social-link" href="https://haysberg.io/atom.xml" title="atom feed">
+                        <svg role="img" aria-label="atom feed">
+                            <use href="https://haysberg.io/images/social_icons/rss.svg#icon" aria-hidden="true" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="social-link" rel="me" href="https://github.com/haysberg" title="github">
+                        <svg role="img" aria-label="github">
+                            <use href="https://haysberg.io/images/social_icons/github.svg#icon" aria-hidden="true" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="social-link" rel="me" href="https://www.linkedin.com/in/teo-hays" title="linkedin">
+                        <svg role="img" aria-label="linkedin">
+                            <use href="https://haysberg.io/images/social_icons/linkedin.svg#icon" aria-hidden="true" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="social-link" rel="me" href="mailto:teo@haysberg.io" title="email">
+                        <svg role="img" aria-label="email">
+                            <use href="https://haysberg.io/images/social_icons/email.svg#icon" aria-hidden="true" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </address>
+        <p class="copyright">
+            <span>(🌸˵•́◡•̀˵)━━━✧.*✨</span>
+        </p>
+    </footer>
+</body>
+
+</html>
