@@ -7,7 +7,7 @@ section_path = "blog/_index.md"
 max_posts = 5
 +++
 
-<img src="images/me.avif" alt="A picture of Téo" style="width:200px;"/>
+<img src="images/me.avif" alt="A picture of me on the computer :3" style="width:200px;"/>
 
 ┬┴┬┴┤•ᴥ•ʔ├┬┴┬┴
 

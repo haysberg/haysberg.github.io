@@ -1,0 +1,28 @@
+{#- Shadows themes/terminus/templates/partials/header.html.
+
+    Everything below the banner is copied verbatim from the theme -- keep it in
+    sync when the submodule updates. The `partials/logo.html` include still
+    resolves to the theme's copy, since we don't shadow that one.
+
+    The banner is a plain <img> rather than the theme's `header_logo`, which
+    swaps out the title text and is capped at one line-height. Dimensions are
+    hardcoded to reserve the space before the image loads: Zola's
+    `get_image_metadata` can't read AVIF. Re-measure with
+    `ffprobe -show_entries stream=width,height` if the file is replaced. -#}
+{% if config.extra.header_banner -%}
+<img class="header-banner"
+     src="{{ get_url(path=config.extra.header_banner, cachebust=true) }}"
+     alt="{{ config.extra.header_banner_alt | default(value='') }}"
+     width="1568" height="412"
+     decoding="async" fetchpriority="high">
+{%- endif %}
+<div class="header-container">
+    <span class="header-logo-container">
+        {% filter indent -%}{%- filter indent -%}
+        {% include "partials/logo.html" %}
+        {%- endfilter -%}{%- endfilter %}
+    </span>
+</div>
+{% if config.extra.main_menu -%}
+{% include "partials/menu.html" %}
+{%- endif %}

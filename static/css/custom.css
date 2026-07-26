@@ -14,6 +14,61 @@
     --accent-color: #43bc74;
 }
 
+/* Header banner -- emitted by templates/partials/header.html, above the logo
+ * bar. It's a flex item of the theme's `.header`, which is `flex-direction:
+ * column` on desktop but flips to `row` under 684px (_header.scss). So rather
+ * than `flex: 0 0 100%` -- whose basis would mean *height* in the column case
+ * -- the width is set on the cross axis, and the mobile branch adds the wrap
+ * plus basis the row direction needs. `order` keeps it first either way.
+ *
+ * Two separate gaps sit above it. The theme pads the whole body by 40px (20px
+ * under 684px, _main.scss), and its blanket `img, figure, video, table
+ * { margin: 25px 0 }` at _main.scss:118 lands on the banner too -- the theme
+ * resets that same margin on `.logo-img`, so `margin` below must be the
+ * shorthand, not just `margin-block-end`. Trimming only the body's top edge
+ * leaves the side gutters and the footer alone. */
+body.layout-center {
+    padding-block-start: 12px;
+}
+
+.header-banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 0 8px;
+    order: -1;
+}
+
+@media (max-width: 684px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .header-banner {
+        flex-basis: 100%;
+    }
+}
+
+/* Main menu: tighten the gap to whatever `main` starts with.
+ *
+ * Three rules stack there, and because `.header` and `main` are separate flex
+ * items of `body` their margins can't collapse into each other: 10px of
+ * `.main-menu-items` padding, 20px of `.main-menu` margin (_menu.scss) and
+ * 25px on top of `.framed` (_post.scss). Trimming the two header-side ones
+ * keeps this working on pages whose `main` doesn't open with a framed block.
+ *
+ * Only the block-end margin is touched -- the 20px above still separates the
+ * links from the logo bar. Under 684px the theme zeroes `.main-menu` margin
+ * entirely and the items become a popover, whose `:popover-open` padding
+ * outranks the reset below, so the mobile dropdown is unaffected. */
+.main-menu {
+    margin-block-end: 6px;
+}
+
+.main-menu-items {
+    padding-bottom: 0;
+}
+
 /* Main menu: drop the underline.
  *
  * The theme never sets `text-decoration` on `a` -- the underline comes from the
@@ -29,4 +84,51 @@
 .main-menu-items a:hover,
 .main-menu-items a:focus-visible {
     text-decoration: underline;
+}
+
+/* Blogroll -- rendered by templates/blogroll.html, entries come from the
+ * `[[extra.links]]` tables in content/blogroll.md.
+ *
+ * The list sits outside `.content`, so it doesn't inherit the theme's `⦿`
+ * markers; the arrow below is drawn as a pseudo-element instead. `content` uses
+ * the `value / alt-text` form the theme already relies on for its external-link
+ * icon, so screen readers skip the decoration. */
+.blogroll {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0 0;
+}
+
+.blogroll-entry {
+    padding: 14px 0;
+}
+
+.blogroll-entry:not(:last-child) {
+    border-bottom: 1px dotted color-mix(in srgb, var(--text-color) 20%, transparent);
+}
+
+.blogroll-name {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.blogroll-name:hover,
+.blogroll-name:focus-visible {
+    text-decoration: underline;
+}
+
+.blogroll-name::before {
+    content: '➜ ' / '';
+    color: var(--accent-color);
+}
+
+.blogroll-feed {
+    margin-inline-start: 0.5em;
+    font-size: 0.85em;
+    opacity: 0.7;
+}
+
+.blogroll-description {
+    margin: 4px 0 0;
+    opacity: 0.8;
 }

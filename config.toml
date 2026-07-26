@@ -1,6 +1,6 @@
 base_url = "https://haysberg.io/"
 title = "teo@interwebs"
-description = "SRE mad scientist and funny guy."
+description = "YAML technopriest"
 author = "Téo Haÿs"
 
 theme = "terminus"
@@ -34,6 +34,11 @@ favicon_emoji = "🌶️"
 # becomes the <title> tag and the feed name. Rendered with `| safe`, so raw
 # HTML (an <img>, inline SVG) works here too -- unlike main_menu names.
 header_title = "💽 teo@interwebs"
+
+# Banner above the header bar. Not a theme setting -- read by our own
+# templates/partials/header.html override, which shadows the theme's.
+header_banner = "images/header.avif"
+header_banner_alt = "Pastel sunset over a treeline, with a siren pole and power lines in silhouette"
 feed_icon = true
 copy_button = true
 show_default_author = false
@@ -50,6 +55,7 @@ main_menu = [
     { name = "🐙github", url = "https://github.com/haysberg", new_tab = true },
     { name = "🌃linkedin", url = "https://www.linkedin.com/in/teo-hays", new_tab = true },
     { name = "💌email", url = "mailto:teo@haysberg.io" },
+    { name = "🫶blogroll", url = "blogroll", trailing_slash = true },
 ]
 
 socials = [

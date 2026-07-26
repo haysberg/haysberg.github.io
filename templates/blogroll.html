@@ -1,0 +1,59 @@
+{#- Blogroll page template.
+
+    Entries live in the page's front matter as an array of tables, so adding a
+    blog is a content edit and never a template edit:
+
+        [[extra.links]]
+        name = "Someone's blog"
+        url = "https://example.com/"
+        feed = "https://example.com/atom.xml"   # optional
+        description = "Why it's worth reading." # optional
+
+    The page's markdown body is rendered above the list as the intro.
+-#}
+{% extends "base.html" %}
+
+{%- block title -%}
+{{ page.title }} | {{ config.title }}
+{%- endblock -%}
+
+{%- block description -%}
+    {%- if page.description %}
+    <meta name="description" content="{{ page.description | markdown(inline=true) | striptags }}">
+    {%- elif config.description %}
+    <meta name="description" content="{{ config.description }}">
+    {%- endif %}
+{%- endblock -%}
+
+{%- block translations -%}
+    {%- for translation in page.translations -%}
+    <link rel="alternate" hreflang="{{ translation.lang }}" href="{{ translation.permalink | safe }}">
+    {% endfor -%}
+{%- endblock -%}
+
+{%- block main -%}
+{%- filter indent -%}{%- filter indent -%}
+{%- if page.content -%}
+<header class="content {%- if page.extra.framed %} framed{%- endif -%}">
+    {{ page.content | indent | safe }}
+</header>
+{% else -%}
+<h1>{{ page.title | safe }}</h1>
+{% endif -%}
+
+<ul class="blogroll">
+    {%- for link in page.extra.links | default(value=[]) %}
+    <li class="blogroll-entry">
+        <a class="external blogroll-name" href="{{ link.url | safe }}" rel="noopener" {%- if page.extra.new_tab %} target="_blank"{%- endif %}>{{ link.name }}</a>
+        {%- if link.feed %}
+        <a class="blogroll-feed" href="{{ link.feed | safe }}" rel="noopener" aria-label="Feed for {{ link.name }}">[feed]</a>
+        {%- endif %}
+        {%- if link.description %}
+        <p class="blogroll-description">{{ link.description | markdown(inline=true) | safe }}</p>
+        {%- endif %}
+    </li>
+    {%- endfor %}
+</ul>
+
+{% endfilter %}{% endfilter %}
+{%- endblock -%}
